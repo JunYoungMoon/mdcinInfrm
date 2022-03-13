@@ -25,6 +25,7 @@ npm run test:unit
 npm run lint
 ```
 
+![image](https://user-images.githubusercontent.com/35192352/158044283-b8e34d9c-2956-4190-8f88-432260a5aaf5.png)
 
 
 ### Customize configuration
