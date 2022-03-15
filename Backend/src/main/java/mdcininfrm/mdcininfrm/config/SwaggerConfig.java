@@ -13,7 +13,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 @Configuration
 @EnableWebMvc
 public class SwaggerConfig {
-
+    ///swagger-ui/index.html
     @Bean
     public Docket restAPI() {
         return new Docket(DocumentationType.OAS_30)
