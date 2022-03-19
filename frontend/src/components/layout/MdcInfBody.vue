@@ -1,6 +1,7 @@
 <template>
   <div>
-    <MdcInfMap></MdcInfMap>
+    <input type="text" /><button>검색</button>
+    <MdcInfMap id="mapComponent"></MdcInfMap>
   </div>
 </template>
 
@@ -15,4 +16,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#mapComponent {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+</style>
