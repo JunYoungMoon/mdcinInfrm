@@ -7,6 +7,7 @@
 <script>
 export default {
   name: "MdclnMap",
+  watch: {},
   methods: {
     initMap() {
       const container = document.querySelector("#map");

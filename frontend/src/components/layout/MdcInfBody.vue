@@ -1,7 +1,12 @@
 <template>
   <div>
-    <input type="text" /><button>검색</button>
-    <MdcInfMap id="mapComponent"></MdcInfMap>
+    <input
+      id="serachInput"
+      type="text"
+      v-model="searchWords"
+      v-on:keyup.enter="search()"
+    /><button v-on:click="search()">검색</button>
+    <MdcInfMap id="mapComponent" v-bind:searchWords="searchWords"></MdcInfMap>
   </div>
 </template>
 
@@ -10,6 +15,21 @@ import MdcInfMap from "@/components/api/MdcInfMap.vue";
 
 export default {
   name: "MdcInfBody",
+  data: function () {
+    return {
+      searchWords: "",
+    };
+  },
+  methods: {
+    search() {
+      if (this.searchWords === "") {
+        alert("지역을 입력해주세요");
+        document.getElementById("serachInput").focus();
+      } else {
+        console.log(this.searchWords);
+      }
+    },
+  },
   components: {
     MdcInfMap,
   },
